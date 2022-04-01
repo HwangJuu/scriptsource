@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //익명함수 - hoisting 안됨. 선언하고 호출만 가능.
+      let sum = 0;
+
+      // output(); //Uncaught ReferenceError: Cannot access 'output' before initialization
+
+      const output = function () {
+        for (var i = 1; i < 11; i++) {
+          sum += i;
+        }
+        document.write(sum);
+      };
+      output();
+      document.write("<br>");
+      const result = function add(a, b) {
+        //이름이 있든 없든 직접 호출은 안됨.
+        return a + b;
+      };
+      //   add(3, 5); //add is not defined
+      document.write(result(3, 5));
+    </script>
+  </body>
+</html>
