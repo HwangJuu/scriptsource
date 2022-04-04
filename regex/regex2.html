@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem a.
+      <br />
+      voluptatibus ipsam modi sed, vitae voluptas doloremque nulla eaque error
+      deserunt? Beatae expedita nam odio. Ipsum Reprehenderit ipsam est et ex
+      assumenda.
+    </p>
+    <script>
+      //원본 문자열 가져오기
+      let p1 = document.querySelector("p").innerHTML;
+
+      console.log("i 플래그");
+      console.log(p1.match(/Ipsum/i)); //가장 처음 대소문자 구별하지 않고 ipsum을 찾아줘
+      console.log("");
+      console.log("gi 플래그");
+      console.log(p1.match(/Ipsum/gi)); //문장 전체 대소문자 구별하지 않고 ipsum을 찾아줘
+      console.log("");
+      console.log("gm 플래그");
+      console.log(p1.match(/a.$/gm)); //문단이 나눠져있는 상황에서 ~~로 끝나는 찾아줘
+    </script>
+  </body>
+</html>
